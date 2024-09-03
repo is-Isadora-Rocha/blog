@@ -1,6 +1,6 @@
-class Api::V1::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < ActionController::API
   def index
-    render json: Article.all, status: :accepted #status 202 no spec
+    render json: Article.all, status: :ok
     #render json: { message: 'carregado'}
   end
 end
