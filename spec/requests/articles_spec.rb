@@ -5,8 +5,8 @@ RSpec.describe 'Articles' do
     it '/articles' do
       get '/articles.json'
 
-      expect(response).to have_http_status(:ok)
-      #expect(response).to have_http_status(:accepted) #status 202
+      #expect(response).to have_http_status(:ok)
+      expect(response).to have_http_status(:accepted) #status 202
     end
   end
 end
