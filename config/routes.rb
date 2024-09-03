@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   #resources :articles, only: :index, constraints: lambda { |req| ['json', 'xml'].include? req.format }
   # :constraints para especificar um formato obrigatório, no caso em json e xml, incluídos no GET 127.0.0.1:3000/articles.json OU .xml
 
-  resources :articles, only: :index, constraints: lambda { |req| %w[json].include? req.format }
+  namespace :api do
+    namespace :v1 do
+      resources :articles, only: :index, constraints: lambda { |req| %w[json].include? req.format }
+    end
+  end
   # %w = array em string
 
   get "up" => "rails/health#show", as: :rails_health_check
