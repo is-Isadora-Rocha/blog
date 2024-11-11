@@ -50,7 +50,7 @@ group :development do
   gem "web-console"
 
   # Testes - [https://github.com/rspec/rspec-rails]
-  gem 'rspec-rails', '~> 7.0.0'
+  gem 'rspec-rails', '~> 7.1.0'
 end
 
 group :test do
